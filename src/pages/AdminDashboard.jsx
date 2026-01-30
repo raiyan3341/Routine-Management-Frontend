@@ -15,7 +15,7 @@ const AdminDashboard = () => {
         if (type === 'delete') {
             if (!window.confirm("Are you sure you want to delete this class?")) return;
 
-            const response = await fetch('http://localhost:3000/routine', {
+            const response = await fetch('https://routine-management-backend.vercel.app/routine', {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({ day, slotIndex })
@@ -41,7 +41,7 @@ const AdminDashboard = () => {
             return;
         }
 
-        const response = await fetch('http://localhost:3000/routine', {
+        const response = await fetch('https://routine-management-backend.vercel.app/routine', {
             method: 'PATCH',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(updateData)

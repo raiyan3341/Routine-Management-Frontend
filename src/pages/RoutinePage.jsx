@@ -9,7 +9,7 @@ const RoutinePage = () => {
     const { user } = useContext(AuthContext);
 
     const fetchRoutine = () => {
-        fetch('http://localhost:3000/routine')
+        fetch('https://routine-management-backend.vercel.app/routine')
             .then(res => res.json())
             .then(data => setRoutine(data));
     };
@@ -21,7 +21,7 @@ const RoutinePage = () => {
     const handleQuickDelete = async (day, slotIndex) => {
         if (!window.confirm(`Delete this class?`)) return;
         try {
-            const response = await fetch('http://localhost:3000/routine', {
+            const response = await fetch('https://routine-management-backend.vercel.app/routine', {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' },
                 body: JSON.stringify({ day, slotIndex })
