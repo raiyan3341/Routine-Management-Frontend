@@ -14,7 +14,7 @@ const Navbar = () => {
     return (
         <nav className="sticky top-0 z-50 bg-[#0f172a]/80 backdrop-blur-md border-b border-slate-800 shadow-xl">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="flex justify-between items-center h-14">
+                <div className="flex justify-between items-center h-11 md:h-15">
                     
                     {/* Logo Area */}
                     <Link to="/" className="flex items-center gap-2 group">
