@@ -58,7 +58,7 @@ const downloadPDF = () => {
     
     doc.setTextColor(255, 255, 255);
     doc.setFontSize(9);
-    doc.text("CLASS ROUTINE • SUMMER 2026 • SECTION 8C", 148.5, 19, { align: 'center' });
+    doc.text("CLASS ROUTINE • FALL 2026 • SECTION 9C", 148.5, 19, { align: 'center' });
 
     const tableColumn = ["DAY", ...timeSlots];
     const tableRows = days.map(day => {
@@ -115,7 +115,7 @@ const downloadPDF = () => {
     doc.setTextColor(150);
     doc.text(`Generated: ${new Date().toLocaleString()}`, 10, doc.internal.pageSize.height - 5);
 
-    doc.save(`NUB_Routine_8C.pdf`);
+    doc.save(`NUB_Routine_9C.pdf`);
 };
 
     const handleUpdate = async (e) => {
@@ -162,7 +162,7 @@ const downloadPDF = () => {
                 <h1 className="text-xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-tighter uppercase italic">
                     Northern University Bangladesh
                 </h1>
-                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em] mt-1">Summer Semester 2026</p>
+                <p className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-[0.3em] mt-1">FALL Semester 2026</p>
             </div>
 
             {/* Routine Table */}
